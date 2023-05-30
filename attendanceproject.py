@@ -57,8 +57,9 @@ while True:
         match = fr.compare_faces(encode_list, encode_frame)
         facedis = fr.face_distance(encode_list, encode_frame)
         print(facedis)
-        matchindex = np.argmin(facedis)
+        matchindex = np.argmin(facedis)        
 
+        # matching stored encoding with video faces
         if match[matchindex]:
             name = student_name[matchindex].upper()
             y1, x2, y2, x1 = faceloc
